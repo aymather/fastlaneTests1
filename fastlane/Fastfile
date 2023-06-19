@@ -1,0 +1,20 @@
+# Before all lanes
+# https://docs.fastlane.tools/advanced/#before-all-and-after-all-blocks
+# 1. Make sure we are on the master branch
+# 2. Make sure we have no uncommitted changes
+# 3. Make sure we have the latest changes from the remote
+before_all do
+    puts 'Before all'
+    # ensure_git_branch(branch: 'master')
+    # ensure_git_status_clean
+    # git_pull
+end
+
+# iOS deployments
+platform :ios do
+
+    lane :test_lane do
+        puts 'Test lane'
+    end
+
+end
